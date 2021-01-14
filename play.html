@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Halant&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/cb8de7caa2.js" crossorigin="anonymous"></script>
+       
+        <title>CSS flexbox embedd</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                box-sizing: border-box;
+
+            }
+            body{
+                margin: 0;
+                font-family: 'Cormorant SC', serif;
+                background-image: url('images/white.jpg');
+            }
+            .row-menu{
+                display:flex;
+                line-height: 80px;
+                background-color: rgba(214, 203, 203, 0.705);
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .leftSide{
+                color: rgb(24, 100, 185);
+                font-size: 15px;
+                margin-left:35px;
+            }
+
+            .rightSide{
+                margin-right: 35px;
+            }
+
+            .rightSide a{
+                color: rgb(24, 100, 185);
+                font-size: 25px;
+                padding:0 15px;
+                
+            }
+            .rightSide a:hover{
+                color: rgb(172, 155, 155);                
+            }
+            .main{
+                text-align: center;
+                margin-top: 100px;
+            }
+            h2, p{
+                padding: 20px;
+            }
+            
+            button{
+                color: black;
+                background-color: rgba(207, 197, 197, 0.541);
+                margin-top: 10px;
+                padding: 20px 25px;
+                cursor: pointer;
+                border: none;
+                border-radius:15px ;
+                transition: all 0.3s ease 0s;
+            }
+            button a{
+                color: black;
+            }
+            button:hover{
+                background-color: rgb(165, 165, 165);
+            }
+            
+         .media{
+             display:flex;
+            justify-content:center;
+            background-color: rgba(214, 203, 203, 0.705);
+            line-height: 120px;
+            margin-top: 110px;
+         }
+
+         .media a{
+            color:rgb(24, 100, 185);
+            font-size: 40px;
+            margin: 0 25px;
+         }
+         
+         .media a:hover{
+             color:black;
+         }
+
+        </style>
+    </head>
+    <body>
+        <!-- Menu Bar -->
+        <div class="row-menu">
+           <div class="leftSide">
+                <h1>Marques Smalley</h1>
+           </div>
+
+           <div class="rightSide">
+               <a href="play.html"  class="active">Home</a>
+               <a href="#">Projects</a>
+               <a href="contact.php">Contact</a>
+           </div>             
+        </div>
+
+        <!--Main content-->
+            <div class="main">
+            <h2>Marques Smalley</h2>
+            <p>Grand Rapids,MI</p>
+            <p>Western Michigan University graduate</p>
+            <p>B.B.A Degree</p>
+            <p>Front End Developer</p>
+            <button type="button"><a href="contact.php">Contact</a></button>
+            </div>    
+
+            <!--Social Media Footer-->
+           
+                <div class="media">
+                   <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            
+        
+    </body>
+</html>
