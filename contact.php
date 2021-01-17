@@ -137,9 +137,24 @@
             </div>
         </div>
 
+              <!--            Social Footer            -->
+              <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+
         <!--  When form is submitted connect to database  -->
             <?php
                 if($_SERVER['REQUEST_METHOD']=='POST'){
+
+                    if(empty($_POST['f_name']) || empty($_POST['email']) || empty($_POST['message'])){
+                        echo"Please fill the required fields.";
+                        mysql_close($dbc);
+                    }
+
+
                     //connect to database
                     $dbc = mysqli_connect('localhost', 'puser1', 'cis2800puser1', 'test') or
                     die('Cannot connect to DB.'.mysqli_connect_error());
@@ -154,20 +169,11 @@
                     ('$f_name', '$email', '$message')";
                     $r = mysqli_query($dbc, $sql); 
                     
-                    if(empty($_SERVER['f_name']) || empty($_POST['email']) || empty($_POST['message'])){
-                        die('could not connect'.mysqli_connect_error());
-                    }
-
+                   
                 }
             ?>
 
-        <!--            Social Footer            -->
-        <div class="social">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-
+  
 
         
         
